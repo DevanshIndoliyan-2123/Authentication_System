@@ -29,6 +29,7 @@ public class UserEntity {
     private String email;
     private String password;
     private String verifyOtp;
+    private Long verifyOtpExpireAt;
     private Boolean isAccountVerified;
     private String resetOtp;
     private Long resetOtpExpireAt;
@@ -37,6 +38,6 @@ public class UserEntity {
     private LocalDateTime createdAt;
 
     @UpdateTimestamp
-    @Column(name = "updated_at", nullable = false, updatable = false)
+    @Column(name = "updated_at", nullable = false)
     private LocalDateTime updatedAt;
 }
